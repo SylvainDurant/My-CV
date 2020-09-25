@@ -1,3 +1,16 @@
+body{
+    background-image: url(../images/background.jpg);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #00abab;
+}
+.background{
+    background-color: whitesmoke;
+    justify-content: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
 /* Nav */
 #nav{
     z-index: 1;
@@ -35,10 +48,8 @@
 }
 
 /* ABOUT */
-#about{
-    margin-top: 60px;
-}
 .profil{
+    margin-top: 60px;
     width: 300px;
     height: 300px;
     object-fit: cover;
