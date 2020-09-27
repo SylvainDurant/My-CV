@@ -8,7 +8,23 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #00abab;
 }
-
+h1{
+    font-size: 40px;
+    margin: 10px;
+    color: whitesmoke;
+}
+h2{
+    margin-bottom: 50px;
+}
+section{
+    padding: 40px;
+}
+.grid{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+}
 
 /* Nav */
 #nav{
@@ -42,13 +58,21 @@ body{
 .active {
     background-color: #00abab;
 }
-.marginNav {
-    margin-top: 50px;
-}
 
 /* ABOUT */
+#about{
+    padding-top: 60px;
+}
+#about a{
+    color: whitesmoke;
+    font-weight: bolder;
+    text-decoration: none;
+    border: solid whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 1px;
+}
 .profil{
-    margin-top: 60px;
     width: 300px;
     height: 300px;
     object-fit: cover;
@@ -62,27 +86,39 @@ body{
 }
 
 /* SKILLS*/
-.grid{
-    display: grid;
-    grid-template-columns: repeat(5, 20%);
+#skills ul{
+    list-style: none;
+}
+#skills i{
+    float: left;
+    color: black;
+    font-size: 20px;
+}
+.codes,
+.personal,
+.music{
+    border: solid #00abab;
+    background-color: whitesmoke;
 }
 .codes{
     grid-column-start: 2;
-    border: orangered solid;
 }
 .personal{
-    border: lightblue solid;
+
 }
 .music{
-    border: green solid;
-}
-h1{
-    color: orangered;
+
 }
 #icon{
-    color: orangered;
+    color: grey;
+    padding: 20px;
+    font-size: 30px;
 }
 .skills-block{
-    background-color: whitesmoke;
     justify-content: center;
+}
+
+/* CONTACT */
+#contact{
+    grid-column: 3;
 }
