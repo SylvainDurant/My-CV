@@ -63,10 +63,11 @@ body{
 
 /* SKILLS*/
 .grid{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
 }
 .codes{
+    grid-column-start: 2;
     border: orangered solid;
 }
 .personal{
