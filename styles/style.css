@@ -27,6 +27,11 @@ section{
 }
 
 /* Nav */
+@media only screen and (max-width: 600px) {
+    #nav {
+      display: none;
+    }
+}
 #nav{
     z-index: 1;
     overflow: hidden;
