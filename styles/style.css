@@ -1,7 +1,11 @@
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
 html {
     scroll-behavior: smooth;
 }
-  
 body{
     background-image: url(../images/background.jpg);
     background-position-y: center;
@@ -17,18 +21,16 @@ h1{
     margin: 10px;
     color: whitesmoke;
 }
-h2{
-    margin-bottom: 50px;
-}
-section{
-    padding: 40px;
-}
 .grid{
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
+    border: solid greenyellow;
 }
+/* .vertical-center {
+    padding-top: 50px;
+} */
 
 /* DROPDOWN */
 /* Style The Dropdown Button */
@@ -128,7 +130,28 @@ section{
 /* ABOUT */
 #about{
     padding-top: 60px;
+    display: grid;
 }
+#about .gridImage{
+    grid-column: 2 / span 1;
+    border: solid red;
+}
+@media only screen and (max-width: 600px) {
+    #about .gridImage{
+        grid-column: 1 / 6;
+        border: solid red;
+    }
+}    
+#about .gridText{
+    grid-column: 3 / span 2;
+    border: solid red;
+}
+@media only screen and (max-width: 600px) {
+    #about .gridText{
+        grid-column: 1 / 6;
+        border: solid red;
+    }
+}    
 #about a{
     color: whitesmoke;
     font-weight: bolder;
@@ -139,12 +162,8 @@ section{
     border-width: 1px;
 }
 .profil{
-    width: 300px;
-    height: 300px;
+    width: 200px;
     object-fit: cover;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 50%;
     border-style: solid;
     border-width: 5px;
@@ -177,7 +196,6 @@ section{
 }
 #icon{
     color: grey;
-    padding: 20px;
     font-size: 30px;
 }
 .skills-block{
