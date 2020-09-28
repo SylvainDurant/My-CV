@@ -14,6 +14,7 @@ body{
 h1{
     font-size: 40px;
     margin: 10px;
+    padding-top: 60px;
     color: whitesmoke;
 }
 .grid{
@@ -120,6 +121,8 @@ h1{
 }    
 #about .gridText{
     grid-column: 3 / span 2;
+    background-color: rgba(245, 245, 245, 0.3);
+    border-radius: 30px;
 }
 @media only screen and (max-width: 600px) {
     #about .gridText{
@@ -160,14 +163,50 @@ h1{
     background-color: whitesmoke;
 }
 .codes{
-    grid-column-start: 2;
+    grid-area: 1 / 2 / 1 / 5 ;
 }
 .personal{
-
+    grid-area: 2 / 2 / 2 / 5 ;
 }
 .music{
-
+    grid-area: 3 / 2 / 3 / 5 ;
 }
+@media only screen and (min-width: 768px) {
+    #skills .grid{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        border: solid greenyellow;
+    }
+    .codes{
+        grid-area: 1 / 2 / 1 / span 2 ;
+    }
+    .personal{
+        grid-area: 2 / 2 / 2 / span 1 ;
+    }
+    .music{
+        grid-area: 2 / 3 / 2 / span 1 ;
+    }
+}
+@media only screen and (min-width: 992px) {
+    #skills .grid{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        border: solid greenyellow;
+    }
+    .codes{
+        grid-area: 1 / 2 / 1 / span 1 ;
+    }
+    .personal{
+        grid-area: 1 / 3 / 1 / span 1 ;
+    }
+    .music{
+        grid-area: 1 / 4 / 1 / span 1 ;
+    }
+   }
 #icon{
     color: grey;
     font-size: 30px;
