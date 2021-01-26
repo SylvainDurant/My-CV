@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 
+			My Super Blog \m/
+		</title>
+		<script src="myBlogScript.js"></script>
+		<Link rel="stylesheet" href="myBlogStyle.css">
+	</head>
+	<body>
+		<div class="vader">
+			<p class="text_vader">
+				Lord Vader approved
+			</p>
+		</div>	
+        <div id="intro">
+			<img class="me" src="https://ca.slack-edge.com/T5D34AQKC-U5DTPP56K-724ffbbdc2af-512"/>
+		    <h1>
+			    <span class="headline">
+		    		About Me
+		    	</span class="headline">
+		    </h1>
+		    <script>
+				if (user==='Alexe') {
+					document.write('Hello mein Chatoune <3');
+				} else if (user!==''&&user!==null) {
+					document.write('Hello '+ user + '!');
+				} else {
+					document.write('Hello unknown soldier!');
+				}
+			</script>
+			<p>
+				I'm <span class="suround">Sylvain</span class="suround"> and I like coding and Metal \m/
+			</p>
+		    <p class="quote">
+			    "Now I can see the codes looming out of the dark, like arrows in the sky. I can't believe my eyes but it's true..."
+        	</p>
+        </div>
+		<h1>
+			<span class="headline">
+				My Skills
+			</span class="headline">
+		</h1>
+		<table Border="0" Align="center">
+			<tr>
+				<td>
+					<ul>
+						<li>
+							<script>
+								document.write(courses[0])
+							</script>
+						</li>
+						<li>
+							<script>
+								document.write(courses[1])
+							</script>
+						</li>
+						<li>
+							<script>
+								document.write(courses[2])
+							</script>
+						</li>
+						<li>
+							<script>
+								document.write(courses[3])
+							</script>
+						</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		<h1>
+			<span class="headline">
+				My Coding Schedule
+			</span class="headline">
+		</h1>
+		<table class="table-colored" Border="2" Align="center">
+			<tr>
+				<th></th>
+				<th>Mon</th>
+				<th>Tue</th>
+				<th>Wed</th>
+				<th>Thu</th>
+				<th>Fri</th> 
+				<th>Sat</th>
+				<th>Sun</th>
+			</tr>
+			<tr>
+				<td>6:30 - 12:00</td>
+				<td colspan="5" Align="center"> Coding every day <3</td>
+				<td rowspan="4" Align="center">Day off <br />with my <br />family</td>
+				<td rowspan="3" Align="center">Day off <br />with my <br />family</td>
+			</tr>
+			<tr>
+				<td>12:00 - 13:00</td>
+				<td colspan="5" Align="center">Lunch time</td>
+			</tr>
+			<tr>
+				<td>13:00 - 18:30</td>
+				<td colspan="5" Align="center"> Coding every day <3</td>
+			</tr>
+			<tr>
+				<td>18:30 - 19:30</td>
+				<td colspan="5" Align="center">Dinner time</td>
+				<td Align="center">Apéro</td>
+			</tr>
+			<tr>
+				<td>19:30 - 00:00</td>
+				<td colspan="5" Align="center"> maybe some more coding?</td>
+				<td Align="center">Live Twitch!</td>
+				<td Align="center">sleep</td>
+			</tr>
+		</table>
+		<div class="section">
+			<h1>
+				<span class="headline">
+					My Band
+				</span class="headline">
+			</h1>
+		<iframe height="300" width="600" src="https://www.youtube.com/embed/_jgCptb2OVk" allowfullscreen frameborder="0">
+		</iframe>
+		</div>
+		<h1>
+			<span class="headline">
+				Follow me!
+			</span class="headline">
+		</h1>
+		<a href="https://www.facebook.com/sylvain.durant.1/"> Facebook </a>
+		-
+		<a href="https://www.youtube.com/channel/UCBI-dV8j4xyZ0ZeRF5cqoJA"> Youtube </a>
+		-
+		<a href="https://ravenscarband.bandcamp.com/releases"> Bandcamp </a>
+        <div id="outro">
+              <h1>
+		    <span class="headline">
+		    	Contact Me
+		    </span class="headline">
+			</h1>
+			<form>
+				<label>
+		    		Name:
+				</label>
+		    	<input id="name" name="name" type="text" placeholder="enter your name" required/>
+		    	<label>
+		    		Email:
+		    	</label>
+		    	<input id="email" name="email" type="email" placeholder="email@example.com" required/>
+		    	<label>
+		    		Message:
+		    	</label>
+				<textarea name="message" placeholder="enter your message"></textarea>
+				<br/>
+				<input onclick="sorry()" type="submit"  value="SEND" class="submit"/>
+            </form> 
+        </div>
+        <script>
+            var formName = document.getElementById('name');
+            var formEmail = document.getElementById('email');
+
+            function sorry(){
+                if (formName.value!=='' && formEmail.value!==''){
+                    alert("Sorry, your message couldn't be sent due to inexistent server... \n too bad :(");
+                    event.preventDefault();
+                }    
+            }   
+        </script>
+		<!-- Not so amazing code!-->
+	</body>
+</html>
