@@ -6,8 +6,9 @@ h1,h2,h3,h4,h5,h6{
     font-weight: bold;
 }
 img{
-    max-width: 70%;
-    height: auto;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
 }
 ul,ol{
     list-style:none;
@@ -62,8 +63,8 @@ section .heading h2{
 /* ABOUT */
  #about{
     padding-top: 50px;
-    background-image: url("background.jpg");
-    background-position-y: center;
+    background-image: url("../images/background.jpg");
+    background-position-y: -40px;
     background-size: cover;
 }
 .profile-picture{
@@ -111,7 +112,7 @@ section .heading h2{
     background: #ddd;
     border-radius: 10px;
     border: 2px solid #008080;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 .skills-block h5{
     color: #888;
@@ -288,28 +289,104 @@ section .heading h2{
     background:-moz-linear-gradient(bottom right,#008080,black);
     background:-o-linear-gradient(bottom right,#008080,black);;
 }
+#portfolio .col-md-4{
+    margin-bottom: 40px;
+}
 #portfolio .heading h2{
     color: white;
 }
-#portfolio img{
-    width: 100%;
-    height: 100%;
-}
 #portfolio a{
     text-decoration: none;
+}
+#portfolio .img-thumbnail{
+    width: 100%;
+    height: 100%;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%); 
 }
-#portfolio a:hover{
+#portfolio a:hover .img-thumbnail{
     filter: none;
     -webkit-filter: none; 
-}
-#portfolio .col-md-4{
-    margin-bottom: 20px;
 }
 .portfolioText{
     color: white;
     text-align: center;
+}
+#portfolio .iconsContainer{
+    position: absolute; 
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+#portfolio .iconsContainer img{
+    margin-top: 20%;
+    width: 100px;
+    height: 110px;
+}
+#portfolio .portfolioLinksContainer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+#portfolio .portfolioLinks{
+    color: #008080; 
+    position:relative;
+    left: -50%;
+    z-index: 1000000;
+}
+#portfolio .portfolioLink:hover{
+    color: #005a5a; 
+}
+#portfolio .nope:hover{
+    color: red; 
+    cursor: not-allowed;
+}
+#portfolio .nopeText{
+    color: red;
+    padding: 0px 5px;
+    background-color: rgba(245, 245, 245, 0.5);
+    border-radius: 10px;
+}
+#portfolio .portfolioLinks i{ 
+    padding: 0px 10px 10px;
+}
+#portfolio .imgBackground{
+    background-color: rgba(245, 245, 245, 0.4);
+    border-radius: 20px;
+}
+.animated { 
+    animation-duration: 0.5s; 
+    animation-fill-mode: both; 
+} 
+@keyframes flipInX { 
+    0% { 
+        transform: rotateX(90deg); 
+        opacity: 0; 
+    } 
+    100% { 
+        transform: rotateX(0deg); 
+        opacity: 1; 
+    } 
+} 
+.flipInX { 
+    backface-visibility: visible !important; 
+    animation-name: flipInX; 
+}
+@keyframes flipOutX { 
+    0% { 
+        transform: rotateX(0deg); 
+        opacity: 1; 
+    } 
+    100% { 
+        transform: rotateX(90deg); 
+        opacity: 0; 
+    } 
+} 
+.flipOutX { 
+    animation-name: flipOutX; 
+    backface-visibility: visible !important; 
 }
 /* Quotes */
 #quotes{
@@ -347,7 +424,7 @@ section .heading h2{
 
 /* FOOTER */
 footer{
-    background-image:url("background.jpg");
+    background-image:url("../images/background.jpg");
     background-position-y:bottom;
     padding: 20px 0 40px;
 }
@@ -371,4 +448,15 @@ footer .fas:hover{
 footer h5{
     color:white;
     font-weight: normal;
+}
+
+/* this will set the toastr icon */
+#toast-container > .toast-custom {
+    content: "\f00C";
+}
+
+/* this will set the toastr style */
+.toast-custom {
+    top: 90px;
+    background-color: #008080;
 }
